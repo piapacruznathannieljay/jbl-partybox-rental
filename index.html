@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>JEPOY'S JBL PARTYBOX | JBL PartyBox Rental</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="hero">
+    <div class="hero-content">
+      <p class="hero-subtitle">SOUND. MOVIE MARATHON. SING. PARTY.</p>
+
+      <h1>
+        JBL PARTYBOX<br>
+        ULTIMATE
+      </h1>
+
+      <p class="hero-description">
+        COMPLETE PARTY & KARAOKE RENTAL PACKAGES
+      </p>
+
+      <a href="#packages" class="btn">
+        VIEW PACKAGES
+      </a>
+    </div>
+  </header>
+
+
+  <!-- ABOUT -->
+  <section class="section">
+    <h2>JBL PARTYBOX ULTIMATE VIDEOKE FOR RENT</h2>
+
+    <p>
+      Make your celebration unforgettable with powerful JBL sound,
+      karaoke, movies and entertainment delivered directly to your event.
+    </p>
+  </section>
+
+
+  <!-- PACKAGES -->
+  <section id="packages" class="section packages">
+
+    <h2>OUR PACKAGES</h2>
+
+    <!-- PACKAGE 1 -->
+    <div class="package-card">
+
+      <h3>PACKAGE 1</h3>
+
+      <ul>
+        <li>JBL PartyBox Ultimate</li>
+        <li>2 Wireless JBL Version 2 Microphones</li>
+      </ul>
+
+      <div class="price">
+        ₱799 <span>/ 12 HOURS</span>
+      </div>
+
+      <div class="price">
+        ₱999 <span>/ 24 HOURS</span>
+      </div>
+
+      <p>₱100/hour extension</p>
+
+      <button onclick="selectPackage('Package 1')">
+        BOOK PACKAGE 1
+      </button>
+
+    </div>
+
+
+    <!-- PACKAGE 2 -->
+    <div class="package-card">
+
+      <h3>PACKAGE 2</h3>
+
+      <ul>
+        <li>JBL PartyBox Ultimate</li>
+        <li>2 Wireless JBL Version 2 Microphones</li>
+        <li>TV Stand</li>
+        <li>Xiaomi 43-inch Google TV</li>
+        <li>YouTube Premium</li>
+        <li>Netflix</li>
+        <li>Disney+</li>
+      </ul>
+
+      <div class="price">
+        ₱1,099 <span>/ 12 HOURS</span>
+      </div>
+
+      <div class="price">
+        ₱1,399 <span>/ 24 HOURS</span>
+      </div>
+
+      <p>₱150/hour extension</p>
+
+      <button onclick="selectPackage('Package 2')">
+        BOOK PACKAGE 2
+      </button>
+
+    </div>
+
+
+    <!-- FULL PACKAGE -->
+    <div class="package-card featured">
+
+      <h3>FULL PACKAGE</h3>
+
+      <ul>
+        <li>JBL PartyBox Ultimate</li>
+        <li>2 Wireless JBL Version 2 Microphones</li>
+        <li>TV Stand</li>
+        <li>Xiaomi 43-inch Google TV</li>
+        <li>YouTube Premium</li>
+        <li>Netflix</li>
+        <li>Disney+</li>
+        <li>Platinum Karaoke Piano XL SD</li>
+        <li>23,000++ Songs</li>
+        <li>Wired Microphone</li>
+        <li>Mini Disco Lights</li>
+      </ul>
+
+      <div class="price">
+        ₱1,199 <span>/ 12 HOURS</span>
+      </div>
+
+      <div class="price">
+        ₱1,599 <span>/ 24 HOURS</span>
+      </div>
+
+      <p>₱150/hour extension</p>
+
+      <button onclick="selectPackage('Full Package')">
+        BOOK FULL PACKAGE
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- DELIVERY -->
+  <section class="section delivery">
+
+    <h2>DELIVERY OPTIONS</h2>
+
+    <div class="delivery-box">
+
+      <h3>DELIVERY FEE</h3>
+
+      <p>
+        📍 Starting point: Bañaga, Bugallon, Pangasinan
+      </p>
+
+      <p>
+        <strong>₱100</strong> for the first 5 km
+      </p>
+
+      <p>
+        Additional <strong>₱50</strong> for every additional 3 km
+      </p>
+
+      <p>
+        The website can calculate your estimated delivery fee
+        using your phone's location.
+      </p>
+
+      <button onclick="calculateDelivery()">
+        CALCULATE MY DELIVERY FEE
+      </button>
+
+      <div id="delivery-result"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BOOKING -->
+  <section id="booking" class="section">
+
+    <h2>BOOK YOUR RENTAL</h2>
+
+    <form id="bookingForm">
+
+      <label for="customerName">
+        Name
+      </label>
+
+      <input
+        type="text"
+        id="customerName"
+        name="customerName"
+        placeholder="Your name"
+        required
+      >
+
+
+      <label for="customerPhone">
+        Contact Number
+      </label>
+
+      <input
+        type="tel"
+        id="customerPhone"
+        name="customerPhone"
+        placeholder="09XXXXXXXXX"
+        required
+      >
+
+
+      <label for="package">
+        Package
+      </label>
+
+      <select id="package" name="package" required>
+
+        <option value="">
+          Select a package
+        </option>
+
+        <option value="Package 1">
+          Package 1
+        </option>
+
+        <option value="Package 2">
+          Package 2
+        </option>
+
+        <option value="Full Package">
+          Full Package
+        </option>
+
+      </select>
+
+
+      <label for="rentalDuration">
+        Rental Duration
+      </label>
+
+      <select id="rentalDuration" name="rentalDuration">
+
+        <option value="12 hours">
+          12 Hours
+        </option>
+
+        <option value="24 hours">
+          24 Hours
+        </option>
+
+      </select>
+
+
+      <label for="eventDate">
+        Event Date
+      </label>
+
+      <input
+        type="date"
+        id="eventDate"
+        name="eventDate"
+        required
+      >
+
+
+      <label for="eventAddress">
+        Delivery Address
+      </label>
+
+      <textarea
+        id="eventAddress"
+        name="eventAddress"
+        rows="4"
+        placeholder="Enter your complete delivery address"
+        required
+      ></textarea>
+
+
+      <button type="button" onclick="calculateDelivery()">
+        CALCULATE DELIVERY
+      </button>
+
+      <div id="delivery-result"></div>
+
+
+      <button type="submit">
+        SEND BOOKING REQUEST
+      </button>
+
+    </form>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="section contact">
+
+    <h2>CONTACT US</h2>
+
+    <p>
+      JEPOY'S JBL PARTYBOX
+    </p>
+
+    <a
+      href="https://m.me/1218332498024792"
+      target="_blank"
+      class="messenger-button"
+    >
+      MESSAGE US ON FACEBOOK
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      © 2026 JEPOY'S JBL PARTYBOX
+    </p>
+
+    <p>
+      JBL PartyBox Ultimate Rental
+    </p>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
