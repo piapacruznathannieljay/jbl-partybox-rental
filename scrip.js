@@ -71,7 +71,7 @@ document.getElementById("useLocation").addEventListener("click", () => {
         position.coords.longitude
       );
       showDeliveryResult(distance);
-      status.textContent = "Delivery fee calculated automatically.";
+      status.textContent = "Location selected and delivery fee calculated automatically.";
     },
     () => {
       status.textContent =
