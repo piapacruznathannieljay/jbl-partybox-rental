@@ -29,7 +29,8 @@ document.querySelectorAll("[data-package]").forEach((btn) => {
   X6QF+QR6 / supplied Google Maps location
 
   Delivery:
-  0–5 km = ₱100
+  0-5 km = free
+  every 6 km = ₱100
   Every additional 3 km or part of 3 km = +₱50
 */
 
